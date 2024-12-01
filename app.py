@@ -52,8 +52,6 @@ def pizza_menu():
     ]
 
     type = request.args.get("sort", "up").lower()
-    if type not in ["up", "desc"]:
-        type = "up"
 
     if type == "desc":
         menu_items.sort(key=lambda price: price["price"], reverse=True)  # сортеруем ↧ reverse=True = сортировка будет выполнена в обратном порядке
